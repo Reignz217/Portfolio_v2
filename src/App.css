@@ -4,6 +4,23 @@
     scroll-behavior: smooth;
 }
 
+.name {
+  background-image: linear-gradient(to right, #00ADB5, #57C785, #EDDD53, #57C785, #EDDD53);
+  background-clip: text;
+  color: transparent;
+  /*background-size: 200%;
+  animation: animate 2s steps(5) infinite;*/
+}
+
+
+/*@keyframes animate{
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 100%;
+  }
+}*/
 
 /* typing animation for description */
 .desc {
@@ -79,5 +96,4 @@
   transform-origin: bottom left;
 }
 /* END */
-
 
