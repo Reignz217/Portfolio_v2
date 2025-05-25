@@ -15,7 +15,7 @@ export default function Projects() {
         <div className='grid md:grid-cols-2 lg:gap-10 gap-5'>
             {proj.map((proj) =>
             {
-            return  <img onClick={() => setView(proj.p_img)} key={proj.p_no} alt={`Project ${proj.p_no}`} className='hover:scale-105 transition-all duration-500 cursor-pointer' src={proj.p_img}></img>
+            return  <img onClick={() => setView(proj.p_img)} key={proj.p_no} loading='lazy' alt={`Project ${proj.p_name}`} className='hover:scale-105 transition-all duration-500 cursor-pointer' src={proj.p_img}></img>
             })}
         </div>
             <button className='bg-[#00ADB5] lg:px-8 lg:py-4 px-5 py-3 rounded-3xl flex gap-2 cursor-pointer text-sm items-center button'>Show All <ArrowRight /> </button>
@@ -26,13 +26,20 @@ export default function Projects() {
               <div className='flex items-center sticky top-0'>
                 <button onClick={()=>setView(null)} className='absolute lg:top-5 top-3 right-0 p-2 text-black bg-white rounded-full cursor-pointer '><X className='size-4 lg:size-6'/></button>
               </div>
-              <img className='lg:p-20 md:p-10 mt-20 lg:mt-0' src={selectedProject.p_img}/>
+              <img className='lg:p-20 md:p-10 mt-20 lg:mt-0' loading='lazy' alt={`Project ${selectedProject.p_no}`} src={selectedProject.p_img}/>
               <div className='lg:-mt-18 md:-mt-8 mt-2 text-center'>
-                <h4 className='lg:text-3xl md:text-2xl text-lg'>{selectedProject.p_name}</h4>
+                <h4 className='lg:text-3xl md:text-2xl text-lg font-bold'>{selectedProject.p_name}</h4>
                 <p className='lg:text-xl text-sm md:text-lg mb-3 text-gray-300'>{selectedProject.p_tag}</p>
                 <p className='lg:text-xl text-sm md:text-lg'>
                   {selectedProject.p_data}
                 </p>
+                <ul key={selectedProject.p_no} className='text-start mt-5'>
+                  <li className='px-5 my-1 lg:text-xl text-sm md:text-lg'><span className='lg:text-2xl md:text-xl text-lg'>Role:</span> {selectedProject.p_role}</li>
+                  <li className='px-5 my-1 lg:text-2xl md:text-xl text-lg'><span>Tech Stack:</span></li>
+                  {selectedProject.p_tech.map((tech, index) => (
+                    <li key={index} className='list-disc md:mx-30 mx-20 lg:text-xl text-sm md:text-lg'>{tech}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

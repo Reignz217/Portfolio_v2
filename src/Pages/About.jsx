@@ -4,7 +4,7 @@ export default function About() {
     <section id="about"  className="my-10 p-5 flex flex-col justify-center items-center md:gap-10 gap-2 scroll-mt-20">
         <h4 className="lg:text-5xl md:text-3xl text-xl">About Me</h4>
         <div className="flex lg:flex-row flex-col md:justify-center items-center lg:items-start lg:gap-20 gap-10">
-            <img src="/Profile.jpg" className="lg:w-120 lg:h-120 md:w-90 md:h-90 w-60 aspect-square rounded-xl"></img>
+            <img src="/Profile.jpg" alt="Profile Picture" loading='lazy' className="lg:w-120 lg:h-120 md:w-90 md:h-90 w-60 aspect-square rounded-xl"></img>
             <div className="flex flex-col lg:gap-20 gap-10">
                 <p className="lg:text-2xl md:text-xl">
                     I'm a front-end developer who brings web designs to life using HTML, CSS, and JavaScript. My role focuses on building user-friendly, 
