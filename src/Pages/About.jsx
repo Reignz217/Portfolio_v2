@@ -5,30 +5,22 @@ export default function About() {
         <h4 className="lg:text-5xl md:text-3xl text-xl">About Me</h4>
         <div className="flex lg:flex-row flex-col md:justify-center items-center lg:items-start lg:gap-20 gap-10">
             <img src="/Profile.jpg" alt="Profile Picture" loading='lazy' className="lg:w-120 lg:h-120 md:w-90 md:h-90 w-60 aspect-square rounded-xl"></img>
-            <div className="flex flex-col lg:gap-20 gap-10">
+            <div className="flex flex-col lg:gap-5 gap-3">
                 <p className="lg:text-2xl md:text-xl">
-                    I'm a front-end developer who brings web designs to life using HTML, CSS, and JavaScript. My role focuses on building user-friendly, 
-                    interactive websites that look great and function smoothly across all devices. 
-                    I work closely with designers to ensure the user experience is seamless and visually appealing.
+                    I'm a front-end web developer focused on building responsive and maintainable websites using React, Tailwind CSS, and JavaScript.
+                     I specialize in turning Figma designs into clean and functional UIs to create dynamic user experiences.
                 </p>
-                <div className="flex flex-col gap-5">
-                    <div className="flex md:flex-row flex-col md:gap-5 gap-2 md:items-center hover:scale-105 transition-all duration-500 cursor-pointer">
-                        <p className="min-w-40 lg:text-2xl md:text-xl">HTML & CSS</p>
-                        <hr className="md:w-[65%] w-[80%] md:border-4 border-2 rounded-3xl text-[#00ADB5]"/>
-                    </div>
-                    <div className="flex md:flex-row flex-col md:gap-5 gap-2 md:items-center hover:scale-105 transition-all duration-500 cursor-pointer">
-                        <p className="min-w-40 lg:text-2xl md:text-xl">React JS</p>
-                        <hr className="md:w-[55%] w-[65%] md:border-4 border-2 rounded-3xl text-[#00ADB5]"/>
-                    </div>
-                    <div className="flex md:flex-row flex-col md:gap-5 gap-2 md:items-center hover:scale-105 transition-all duration-500 cursor-pointer">
-                        <p className="min-w-40 lg:text-2xl md:text-xl">Tailwind Css</p>
-                        <hr className="md:w-[60%] w-[70%] md:border-4 border-2 rounded-3xl text-[#00ADB5]"/>
-                    </div>
-                    <div className="flex md:flex-row flex-col md:gap-5 gap-2 md:items-center hover:scale-105 transition-all duration-500 cursor-pointer">
-                        <p className="min-w-40 lg:text-2xl md:text-xl">JavaScript</p>
-                        <hr className="md:w-[50%] w-[60%] md:border-4 border-2 rounded-3xl text-[#00ADB5]"/>
-                    </div>
-                </div>
+                <ul className="flex flex-col gap-2 list-disc">
+                    <li className="uppercase list-none lg:text-2xl md:text-xl"><strong>I'm confident with:</strong></li>
+                    <li className="lg:ml-20 ml-10 lg:text-2xl md:text-xl"> React (Hooks, JSX, React Router)</li>
+                    <li className="lg:ml-20 ml-10 lg:text-2xl md:text-xl">Tailwind CSS, HTML, CSS</li>
+                    <li className="lg:ml-20 ml-10 lg:text-2xl md:text-xl">JavaScript</li>
+                    <li className="lg:ml-20 ml-10 lg:text-2xl md:text-xl">Git & GitHub</li>
+                    <li className="lg:ml-20 ml-10 lg:text-2xl md:text-xl">Responsive design and mobile-first layouts</li>
+                </ul>
+                <p className="lg:text-2xl md:text-xl">
+                    I'm continuously learning backend basics to become a more complete developer.
+                </p>
             </div>
         </div>
     </section>
