@@ -26,8 +26,10 @@ export default function Projects() {
               <div className='flex items-center sticky top-0'>
                 <button onClick={()=>setView(null)} className='absolute lg:top-5 top-3 right-0 p-2 text-black bg-white rounded-full cursor-pointer '><X className='size-4 lg:size-6'/></button>
               </div>
-              <img className='lg:p-20 md:p-10 mt-20 lg:mt-0' loading='lazy' alt={`Project ${selectedProject.p_no}`} src={selectedProject.p_img}/>
-              <div className='lg:-mt-18 md:-mt-8 mt-2 text-center'>
+              <div className='flex justify-center'>
+                <img className='mt-20' loading='lazy' alt={`Project ${selectedProject.p_no}`} src={selectedProject.p_img}/>
+              </div>
+              <div className='mt-2 text-center'>
                 <h4 className='lg:text-3xl md:text-2xl text-lg font-bold'>{selectedProject.p_name}</h4>
                 <p className='lg:text-xl text-sm md:text-lg mb-3 text-gray-300'>{selectedProject.p_tag}</p>
                 <p className='lg:text-xl text-sm md:text-lg'>
