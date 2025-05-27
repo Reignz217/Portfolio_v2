@@ -1,5 +1,5 @@
-import Proj1 from '../../assets/image.png'
-import Proj2 from '../../assets/image2.png'
+import Proj1 from '../../assets/Proj1(1).webp'
+import Proj2 from '../../assets/Proj2(1).webp'
 
 const proj = [
         {
