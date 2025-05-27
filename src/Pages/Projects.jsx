@@ -15,7 +15,7 @@ export default function Projects() {
         <div className='grid md:grid-cols-2 lg:gap-10 gap-5'>
             {proj.map((proj) =>
             {
-            return  <img onClick={() => setView(proj.p_img)} key={proj.p_no} loading='lazy' alt={`Project ${proj.p_name}`} className='hover:scale-105 transition-all duration-500 cursor-pointer' src={proj.p_img}></img>
+            return  <img onClick={() => setView(proj.p_img)} key={proj.p_no} loading='lazy' alt={`Project ${proj.p_name}`} className='hover:scale-105 transition-all duration-500 cursor-pointer w-full' src={proj.p_img}></img>
             })}
         </div>
             <button className='bg-[#00ADB5] lg:px-8 lg:py-4 px-5 py-3 rounded-3xl flex gap-2 cursor-pointer text-sm items-center button'>Show All <ArrowRight /> </button>
@@ -27,7 +27,7 @@ export default function Projects() {
                 <button onClick={()=>setView(null)} className='absolute lg:top-5 top-3 right-0 p-2 text-black bg-white rounded-full cursor-pointer '><X className='size-4 lg:size-6'/></button>
               </div>
               <div className='flex justify-center'>
-                <img className='mt-20' loading='lazy' alt={`Project ${selectedProject.p_no}`} src={selectedProject.p_img}/>
+                <img className='mt-20 lg:w-2/3' loading='lazy' alt={`Project ${selectedProject.p_no}`} src={selectedProject.p_img}/>
               </div>
               <div className='mt-2 text-center'>
                 <h4 className='lg:text-3xl md:text-2xl text-lg font-bold'>{selectedProject.p_name}</h4>
