@@ -1,7 +1,7 @@
 
 export default function Home() {
   return (
-    <section id="home" className="flex flex-col md:justify-center items-center md:h-screen md:gap-5 scroll-mt-40">
+    <section id="home" className="flex flex-col md:justify-center items-center md:h-screen md:gap-5 scroll-mt-40 object-cover">
         <img src="/Profile.webp" alt="Profile Picture" className="rounded-full lg:w-100 lg:h-100 md:w-70 md:h-70 w-60 mt-5 md:-mt-20 aspect-square"/>
         <div className="flex flex-col md:gap-5 px-5 md:px-0 text-center md:w-3/4">
             <h4 className="lg:text-5xl md:text-4xl text-lg">
