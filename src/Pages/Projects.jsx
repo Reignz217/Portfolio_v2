@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ArrowRight, X } from 'lucide-react'
+import { ArrowRight, Link, X } from 'lucide-react'
 import proj from './Proj_Data/Proj.js'
 
 
@@ -22,14 +22,14 @@ export default function Projects() {
       {/* MODAL */}
         {view && selectedProject && (
           <div onClick={()=>setView(null)} className='fixed inset-0 bg-gray-800/75 flex justify-center items-center lg:p-20 z-50'>
-            <div onClick={(e) => e.stopPropagation()} className='lg:w-4/5 h-full bg-[#393E46] lg:rounded-2xl px-3 pb-10 flex-col justify-center items-center overflow-y-auto relative'>
+            <div onClick={(e) => e.stopPropagation()} className='lg:w-4/5 h-full bg-[#393E46] lg:rounded-2xl px-3 pb-10 overflow-y-auto relative'>
               <div className='flex items-center sticky top-0'>
                 <button onClick={()=>setView(null)} className='absolute lg:top-5 top-3 right-0 p-2 text-black bg-white rounded-full cursor-pointer '><X className='size-4 lg:size-6'/></button>
               </div>
               <div className='flex justify-center lg:w-2/3 m-auto'>
                 <img className='mt-20' loading='lazy' alt={`Project ${selectedProject.p_no}`} src={selectedProject.p_img}/>
               </div>
-              <div className='mt-2 text-center'>
+              <div className='mt-2 mb-5 text-center'>
                 <h4 className='lg:text-3xl md:text-2xl text-lg font-bold'>{selectedProject.p_name}</h4>
                 <p className='lg:text-xl text-sm md:text-lg mb-3 text-gray-300'>{selectedProject.p_tag}</p>
                 <p className='lg:text-xl text-sm md:text-lg'>
@@ -42,6 +42,11 @@ export default function Projects() {
                     <li key={index} className='list-disc md:mx-30 mx-20 lg:text-xl text-sm md:text-lg'>{tech}</li>
                   ))}
                 </ul>
+              </div>
+              <div className='flex justify-center'>
+                <a href={selectedProject.p_link} target='_blank' className='text-center lg:text-xl text-sm md:text-lg px-5 py-3 cursor-pointer button'>
+                  Visit Project
+                </a>
               </div>
             </div>
           </div>

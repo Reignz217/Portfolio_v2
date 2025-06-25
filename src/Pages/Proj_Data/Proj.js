@@ -9,7 +9,8 @@ const proj = [
             p_data:"The Health Information System (HIS) provides intriguing potential for both the community it serves and the global healthcare environment. By giving midwives and Barangay Health Workers (BHW's) a user-friendly platform for managing health information, HIS empowers frontline healthcare practitioners and improves access to excellent treatment.",
             p_tag:"( This is our Capstone in college )",
             p_role: "Front-End and Back-End Developer",
-            p_tech: ["HTML", "CSS", "PHP","MySQL", "Visual Studio Code"]
+            p_tech: ["HTML", "CSS", "PHP","MySQL", "Visual Studio Code"],
+            p_link: "https://health-information-system-rework.netlify.app/"
         },
         {
             p_no: 2, 
