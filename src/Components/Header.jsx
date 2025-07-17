@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import {AlignJustify, ChevronLast} from 'lucide-react'
 
 export default function Header() {
@@ -12,7 +12,25 @@ export default function Header() {
         { id: "contact", label: "Contact" },
     ];
 
-    
+    useEffect(() => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setMenu(entry.target.id);
+                }
+            });
+        },
+        {
+            threshold: 0.8, // trigger when 80% of section is visible
+        }
+    );
+
+    const sections = document.querySelectorAll("section");
+        sections.forEach(section => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <div className="text-[#00ADB5] flex justify-between items-center p-5 sticky top-0 bg-[#222831] border-b z-1">
